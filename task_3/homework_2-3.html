@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var cartSum = 0;  
+      var cart = [
+        {
+          title: "Товар 1",
+          price: 100,
+          count: 3
+        },
+        {
+          title: "Товар 2",
+          price: 200,
+          count: 5
+        },
+        {
+          title: "Товар 3",
+          price: 300,
+          count: 10
+        }
+      ];
+
+    //   function countCartPrice() {
+      for (var item of cart) {
+        cartSum += item.count * item.price;
+      }
+      console.log(cartSum);
+    // }
+
+    </script>
+  </body>
+</html>
