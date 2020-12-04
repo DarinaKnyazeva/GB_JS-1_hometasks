@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="chess_board"></div>
+
+    <script>
+
+      var table = document.createElement("table");
+      var td, tr;
+      var letters = [" ", "A", "B", "C", "D", "E", "F", "G", "H", " "];
+      var num = [" ", "1", "2", "3", "4", "5", "6", "7", "8", " "];
+
+      var letterRow = document.createElement("tr");
+      letterRow.style.transform = "rotate(180deg)";
+      table.append(letterRow);
+
+      for (k = 0; k < letters.length; k++) {
+        var letterRowTd = document.createElement("td");
+        letterRowTd.className = "row_td";
+        letterRow.append(letterRowTd);
+        letterRowTd.innerHTML = letters[k];
+      }
+
+      for (i = 0; i < 8; i++) {
+        tr = document.createElement("tr");
+        table.append(tr);
+        td = document.createElement("td");
+        td.innerHTML = 8-i;
+        table.append(td);
+
+        for (j = 0; j < 8; j++) {
+          td = document.createElement("td");
+          table.append(td);
+          if (i % 2 == j % 2) {
+            td.className = "white";
+          } else {
+            td.className = "black";
+          }
+        }
+        td = document.createElement("td");
+        td.innerHTML = 8-i;
+        table.append(td);
+
+      }
+
+      var letterRow = document.createElement("tr");
+      table.append(letterRow);
+
+      for (k = 0; k < letters.length; k++) {
+        var letterRowTd = document.createElement("td");
+        letterRowTd.className = "row_td";
+        letterRow.append(letterRowTd);
+        letterRowTd.innerHTML = letters[k];
+      }
+
+      document.getElementsByClassName("chess_board")[0].append(table);
+    </script>
+  </body>
+</html>
