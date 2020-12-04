@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function sumOfVariables(a, b) {
+        return a + b;
+      }
+
+      function supOfVariables(a, b) {
+        return a - b;
+      }
+
+      function multiOfVariables(a, b) {
+        return a * b;
+      }
+
+      function divOfVariables(a, b) {
+        return a / b;
+      }
+
+      function mathOperation(arg1, arg2, operation) {
+        switch (operation) {
+          case "sum":
+            return sumOfVariables(arg1, arg2);
+            break;
+          case "sup":
+            return supOfVariables(arg1, arg2);
+            break;
+          case "multi":
+            return multiOfVariables(arg1, arg2);
+            break;
+          case "div":
+            return divOfVariables(arg1, arg2);
+            break;
+        }
+      }
+
+      arg1 = +prompt("Введите первый аргумент: ");
+      arg2 = +prompt("Введите второй аргумент: ");
+      operation = prompt("Назовите операцию: sum, sup, multi, div: ");
+
+      console.log(mathOperation(arg1, arg2, operation));
+    </script>
+  </body>
+</html>
