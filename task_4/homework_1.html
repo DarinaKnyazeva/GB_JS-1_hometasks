@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var num = Math.floor(Math.random() * 999) - 1;
+      var obj = {
+        hundreds: 0,
+        tens: 0,
+        units: 0,
+      };
+      if (num <= 9) {
+        obj.units = num;
+      } else if (num <= 999) {
+        obj.hundreds = Math.floor((num / 100) % 10);
+        obj.tens = Math.floor((num / 10) % 10);
+        obj.units = Math.floor(num % 10);
+      }
+      console.log(num);
+      console.log(obj);
+    </script>
+  </body>
+</html>
